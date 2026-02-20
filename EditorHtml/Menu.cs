@@ -9,6 +9,10 @@ public class Menu
         Console.ForegroundColor = ConsoleColor.Black;
         
         Draw();
+        WriteOp();
+        short option = short.Parse(Console.ReadLine());
+        HandleMenuOp(option);
+
     }
 
     public static void Draw()
@@ -42,6 +46,35 @@ public class Menu
 
     public static void WriteOp()
     {
+        Console.SetCursorPosition(3,1);
+        Console.WriteLine("       Editor HTMl       ");
         Console.SetCursorPosition(3,2);
+        Console.WriteLine("===========================");
+        Console.SetCursorPosition(3,3);
+        Console.WriteLine("Selecione uma opção abaixo: ");
+        Console.SetCursorPosition(3,4);
+        Console.WriteLine("1 - Criar Arquivo");
+        Console.SetCursorPosition(3,5);
+        Console.WriteLine("2 - Abrir Arquivo");
+        Console.SetCursorPosition(3,6);
+        Console.WriteLine("0 - Sair");
+        Console.SetCursorPosition(3,7);
+        Console.WriteLine("opção:");
+    }
+
+    public static void HandleMenuOp(short option)
+    {
+        switch (option)
+        {
+            case 1: Editor.Show(); break;
+            case 2: Console.WriteLine("View"); break;
+            case 0:
+            {
+                Console.Clear();
+                Environment.Exit(0);
+                break;
+            }
+            default: Show(); break;
+        }
     }
 }
