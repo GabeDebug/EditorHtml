@@ -1,4 +1,6 @@
-﻿namespace EditorHtml;
+﻿using System.Xml.Linq;
+
+namespace EditorHtml;
 
 public class Menu
 {
@@ -60,6 +62,7 @@ public class Menu
         Console.WriteLine("0 - Sair");
         Console.SetCursorPosition(3,7);
         Console.WriteLine("opção:");
+
     }
 
     public static void HandleMenuOp(short option)
@@ -76,5 +79,6 @@ public class Menu
             }
             default: Show(); break;
         }
+        
     }
 }
