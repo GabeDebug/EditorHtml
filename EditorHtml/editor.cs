@@ -5,7 +5,7 @@ namespace EditorHtml;
 
 public static class Editor
 {
-    public static void Show()
+    public static void Show(string text)
     {
         Console.Clear();
         Console.BackgroundColor = ConsoleColor.White;

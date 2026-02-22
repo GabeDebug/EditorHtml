@@ -14,7 +14,7 @@ public class Menu
         WriteOp();
         short option = short.Parse(Console.ReadLine());
         HandleMenuOp(option);
-       // Viewer.Salvar();
+        
 
     }
 
@@ -60,20 +60,18 @@ public class Menu
         Console.SetCursorPosition(3,5);
         Console.WriteLine("2 - Abrir Arquivo");
         Console.SetCursorPosition(3,6);
-        Console.WriteLine("3 - Salvar");
-        Console.SetCursorPosition(3,7);
         Console.WriteLine("0 - Sair");
-        Console.SetCursorPosition(3,8);
+        Console.SetCursorPosition(3,7);
         Console.WriteLine("opção:");
-
+ 
     }
 
     public static void HandleMenuOp(short option)
     {
         switch (option)
         {
-            case 1: Editor.Show(); break;
-            case 2: Console.WriteLine("View"); break;
+            case 1: Editor.Show("text"); break;
+            case 2: Viewer.Show("show");  break;
             case 0:
             {
                 Console.Clear();

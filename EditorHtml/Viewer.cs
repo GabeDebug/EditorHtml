@@ -4,7 +4,7 @@ namespace EditorHtml;
 
 public class Viewer
 {
-   public static void Show(string text)
+    public static void Show(string text)
     {
         Console.Clear();
         Console.BackgroundColor = ConsoleColor.White;
@@ -32,7 +32,7 @@ public class Viewer
                     words[i].IndexOf('>') + 1,
                     (
                         words[i].LastIndexOf('<') - 1 -
-                         words[i].IndexOf('>'))
+                        words[i].IndexOf('>'))
                 ));
                 Console.Write(" ");
             }
@@ -42,7 +42,6 @@ public class Viewer
                 Console.Write(words[i]);
                 Console.Write(" ");
             }
-            
         }
     }
 }
